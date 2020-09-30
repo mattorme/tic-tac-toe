@@ -111,7 +111,7 @@ function unlockBoard() {
 }
 
 function checkDraw() {
-  if (checkWin) {
+  if (checkWin()) {
   } else if (
     (space1.textContent == playerOne || space1.textContent == playerTwo) &&
     (space2.textContent == playerOne || space2.textContent == playerTwo) &&
@@ -123,7 +123,7 @@ function checkDraw() {
     (space8.textContent == playerOne || space8.textContent == playerTwo) &&
     (space9.textContent == playerOne || space9.textContent == playerTwo)
   ) {
-    winnerMsg.textContent = `It's a draw`;
+    winnerMsg.textContent = "It's a draw!";
   }
 }
 
@@ -145,8 +145,8 @@ function resetGame() {
 function handleClick(event) {
   event.target.textContent = playerTurn;
   event.target.style.pointerEvents = "none";
-  checkWin();
   checkDraw();
+  checkWin();
   changeTurn();
 }
 
