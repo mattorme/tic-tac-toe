@@ -15,10 +15,7 @@ var playerOne = "x";
 var playerTwo = "o";
 var playerTurn = playerOne;
 var winnerMsg = document.querySelector(".winner-msg-p");
-
-for (var i = 0; i < spaces.length; i++) {
-  spaces[i].addEventListener("click", handleClick);
-}
+var resetBtn = document.querySelector(".reset-button");
 
 // Functions
 function changeTurn() {
@@ -87,8 +84,28 @@ function checkWin() {
   }
 }
 
+function resetGame() {
+  space1.textContent = "";
+  space2.textContent = "";
+  space3.textContent = "";
+  space4.textContent = "";
+  space5.textContent = "";
+  space6.textContent = "";
+  space7.textContent = "";
+  space8.textContent = "";
+  space9.textContent = "";
+  playerTurn = playerOne;
+}
+
 function handleClick(event) {
   event.target.textContent = playerTurn;
   checkWin();
   changeTurn();
 }
+
+// Event Listeners
+for (var i = 0; i < spaces.length; i++) {
+  spaces[i].addEventListener("click", handleClick);
+}
+
+resetBtn.addEventListener("click", resetGame);
