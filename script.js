@@ -11,9 +11,10 @@ var space6 = document.querySelector(".space-6");
 var space7 = document.querySelector(".space-7");
 var space8 = document.querySelector(".space-8");
 var space9 = document.querySelector(".space-9");
-var x = "x";
-var o = "o";
-var playerTurn = x;
+var playerOne = "x";
+var playerTwo = "o";
+var playerTurn = playerOne;
+var winnerMsg = document.querySelector(".winner-msg-p");
 
 for (var i = 0; i < spaces.length; i++) {
   spaces[i].addEventListener("click", handleClick);
@@ -21,65 +22,68 @@ for (var i = 0; i < spaces.length; i++) {
 
 // Functions
 function changeTurn() {
-  if (playerTurn == x) {
-    playerTurn = o;
+  if (playerTurn == playerOne) {
+    playerTurn = playerTwo;
   } else {
-    playerTurn = x;
+    playerTurn = playerOne;
   }
 }
 
 function checkWin() {
   if (
-    (space1.textContent == x &&
-      space2.textContent == x &&
-      space3.textContent == x) ||
-    (space4.textContent == x &&
-      space5.textContent == x &&
-      space6.textContent == x) ||
-    (space7.textContent == x &&
-      space8.textContent == x &&
-      space9.textContent == x) ||
-    (space1.textContent == x &&
-      space4.textContent == x &&
-      space7.textContent == x) ||
-    (space2.textContent == x &&
-      space5.textContent == x &&
-      space8.textContent == x) ||
-    (space3.textContent == x &&
-      space6.textContent == x &&
-      space9.textContent == x) ||
-    (space1.textContent == x &&
-      space5.textContent == x &&
-      space9.textContent == x) ||
-    (space3.textContent == x &&
-      space5.textContent == x &&
-      space7.textContent == x) ||
-    (space1.textContent == o &&
-      space2.textContent == o &&
-      space3.textContent == o) ||
-    (space4.textContent == o &&
-      space5.textContent == o &&
-      space6.textContent == o) ||
-    (space7.textContent == o &&
-      space8.textContent == o &&
-      space9.textContent == o) ||
-    (space1.textContent == o &&
-      space4.textContent == o &&
-      space7.textContent == o) ||
-    (space2.textContent == o &&
-      space5.textContent == o &&
-      space8.textContent == o) ||
-    (space3.textContent == o &&
-      space6.textContent == o &&
-      space9.textContent == o) ||
-    (space1.textContent == o &&
-      space5.textContent == o &&
-      space9.textContent == o) ||
-    (space3.textContent == o &&
-      space5.textContent == o &&
-      space7.textContent == o)
+    (space1.textContent == playerOne &&
+      space2.textContent == playerOne &&
+      space3.textContent == playerOne) ||
+    (space4.textContent == playerOne &&
+      space5.textContent == playerOne &&
+      space6.textContent == playerOne) ||
+    (space7.textContent == playerOne &&
+      space8.textContent == playerOne &&
+      space9.textContent == playerOne) ||
+    (space1.textContent == playerOne &&
+      space4.textContent == playerOne &&
+      space7.textContent == playerOne) ||
+    (space2.textContent == playerOne &&
+      space5.textContent == playerOne &&
+      space8.textContent == playerOne) ||
+    (space3.textContent == playerOne &&
+      space6.textContent == playerOne &&
+      space9.textContent == playerOne) ||
+    (space1.textContent == playerOne &&
+      space5.textContent == playerOne &&
+      space9.textContent == playerOne) ||
+    (space3.textContent == playerOne &&
+      space5.textContent == playerOne &&
+      space7.textContent == playerOne)
   ) {
-    console.log("winner");
+    winnerMsg.textContent = `X's won!`;
+  } else if (
+    (space1.textContent == playerTwo &&
+      space2.textContent == playerTwo &&
+      space3.textContent == playerTwo) ||
+    (space4.textContent == playerTwo &&
+      space5.textContent == playerTwo &&
+      space6.textContent == playerTwo) ||
+    (space7.textContent == playerTwo &&
+      space8.textContent == playerTwo &&
+      space9.textContent == playerTwo) ||
+    (space1.textContent == playerTwo &&
+      space4.textContent == playerTwo &&
+      space7.textContent == playerTwo) ||
+    (space2.textContent == playerTwo &&
+      space5.textContent == playerTwo &&
+      space8.textContent == playerTwo) ||
+    (space3.textContent == playerTwo &&
+      space6.textContent == playerTwo &&
+      space9.textContent == playerTwo) ||
+    (space1.textContent == playerTwo &&
+      space5.textContent == playerTwo &&
+      space9.textContent == playerTwo) ||
+    (space3.textContent == playerTwo &&
+      space5.textContent == playerTwo &&
+      space7.textContent == playerTwo)
+  ) {
+    winnerMsg.textContent = `O's won!`;
   }
 }
 
