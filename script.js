@@ -54,6 +54,7 @@ function checkWin() {
       space7.textContent == playerOne)
   ) {
     winnerMsg.textContent = `X's won!`;
+    lockBoard();
   } else if (
     (space1.textContent == playerTwo &&
       space2.textContent == playerTwo &&
@@ -81,7 +82,32 @@ function checkWin() {
       space7.textContent == playerTwo)
   ) {
     winnerMsg.textContent = `O's won!`;
+    lockBoard();
   }
+}
+
+function lockBoard() {
+  space1.style.pointerEvents = "none";
+  space2.style.pointerEvents = "none";
+  space3.style.pointerEvents = "none";
+  space4.style.pointerEvents = "none";
+  space5.style.pointerEvents = "none";
+  space6.style.pointerEvents = "none";
+  space7.style.pointerEvents = "none";
+  space8.style.pointerEvents = "none";
+  space9.style.pointerEvents = "none";
+}
+
+function unlockBoard() {
+  space1.style.pointerEvents = "all";
+  space2.style.pointerEvents = "all";
+  space3.style.pointerEvents = "all";
+  space4.style.pointerEvents = "all";
+  space5.style.pointerEvents = "all";
+  space6.style.pointerEvents = "all";
+  space7.style.pointerEvents = "all";
+  space8.style.pointerEvents = "all";
+  space9.style.pointerEvents = "all";
 }
 
 function checkDraw() {
@@ -112,10 +138,13 @@ function resetGame() {
   space8.textContent = "";
   space9.textContent = "";
   playerTurn = playerOne;
+  winnerMsg.textContent = "";
+  unlockBoard();
 }
 
 function handleClick(event) {
   event.target.textContent = playerTurn;
+  event.target.style.pointerEvents = "none";
   checkWin();
   checkDraw();
   changeTurn();
