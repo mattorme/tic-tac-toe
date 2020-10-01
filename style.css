@@ -10,6 +10,7 @@
   background-color: #75c88e;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 0px 0px 20px rgb(217, 255, 219);
 }
 body {
   margin: 5% 25% 0 25%;
@@ -33,25 +34,42 @@ h1 {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 2px;
+
   font-family: "Permanent Marker", cursive;
   font-size: 48px;
   cursor: pointer;
 }
 
+.space-1,
+.space-2,
+.space-4,
+.space-5,
+.space-7,
+.space-8 {
+  border-right: #fff solid 5px;
+}
+
+.space-1,
+.space-4,
+.space-2,
+.space-3,
+.space-5,
+.space-6 {
+  border-bottom: #fff solid 5px;
+}
+
 .background {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
-  height: 310px;
-  background-color: #ffffff;
-  width: 310px;
+  height: 300px;
+  background-color: #75c88e;
+  width: 300px;
   margin: 0 auto;
 }
 
 .reset-button-div {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .winner-msg-div {
@@ -76,4 +94,63 @@ h1 {
   width: 65%;
   color: #ffffff;
   outline: none;
+  height: 40px;
+}
+
+/* Media Queries */
+
+/* 320px */
+@media screen and (max-width: 320px) {
+  body {
+    margin: 5% 5% 0 5%;
+  }
+
+  .background {
+    height: 100px;
+    width: 100px;
+  }
+
+  .spaces {
+    height: 35px;
+    width: 35px;
+    font-size: 24px;
+  }
+}
+
+/* 480px */
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 5% 5% 0 5%;
+  }
+
+  .background {
+    height: 100px;
+    width: 100px;
+  }
+
+  .spaces {
+    height: 35px;
+    width: 35px;
+    font-size: 24px;
+  }
+}
+
+/* 600px */
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 5% 5% 0 5%;
+  }
+
+  .background {
+    height: 100px;
+    width: 100px;
+  }
+
+  .spaces {
+    height: 35px;
+    width: 35px;
+    font-size: 24px;
+  }
 }
