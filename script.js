@@ -160,7 +160,7 @@ function resetScores() {
   totalX = 0;
   totalO = 0;
   scoreX.textContent = "Player One Score: " + totalX;
-  scoreO.textContent = "Player One Score: " + totalO;
+  scoreO.textContent = "Player Two Score: " + totalO;
 }
 
 function updateScoreX() {
@@ -170,7 +170,7 @@ function updateScoreX() {
 
 function updateScoreO() {
   totalO = totalO + 1;
-  scoreO.textContent = "Player One Score: " + totalO;
+  scoreO.textContent = "Player Two Score: " + totalO;
 }
 
 function changeBlue() {
