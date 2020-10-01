@@ -16,6 +16,9 @@ var playerTwo = "o";
 var playerTurn = playerOne;
 var winnerMsg = document.querySelector(".winner-msg-p");
 var resetBtn = document.querySelector(".reset-button");
+var scoreX = document.querySelector(".score-count-x");
+var scoreO = document.querySelector(".score-count-o");
+var total = 0;
 
 // Functions
 function changeTurn() {
@@ -55,6 +58,7 @@ function checkWin() {
   ) {
     winnerMsg.textContent = `X's win!`;
     lockBoard();
+    // updateScoreX();
   } else if (
     (space1.textContent == playerTwo &&
       space2.textContent == playerTwo &&
@@ -140,6 +144,11 @@ function resetGame() {
   playerTurn = playerOne;
   winnerMsg.textContent = "";
   unlockBoard();
+}
+
+function updateScoreX() {
+  total++;
+  scoreX.textContent = "Player One Score: " + total;
 }
 
 function handleClick(event) {

@@ -97,6 +97,21 @@ h1 {
   height: 40px;
 }
 
+.score-count-div {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.score-count-x,
+.score-count-o {
+  color: #fff;
+  font-family: "Permanent Marker", cursive;
+  font-size: 19px;
+  display: inline;
+  padding: 15px;
+}
+
 /* Media Queries */
 
 /* 320px */
