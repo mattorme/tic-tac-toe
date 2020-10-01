@@ -15,11 +15,20 @@ var playerOne = "x";
 var playerTwo = "o";
 var playerTurn = playerOne;
 var winnerMsg = document.querySelector(".winner-msg-p");
-var resetBtn = document.querySelector(".reset-button");
+var resetBoard = document.querySelector(".reset-button");
+var resetScore = document.querySelector(".reset-score");
 var scoreX = document.querySelector(".score-count-x");
 var scoreO = document.querySelector(".score-count-o");
 var totalX = 0;
 var totalO = 0;
+var blueBtn = document.querySelector(".blue-btn");
+var greenBtn = document.querySelector(".green-btn");
+var redBtn = document.querySelector(".red-btn");
+var orangeBtn = document.querySelector(".orange-btn");
+var yellowBtn = document.querySelector(".yellow-btn");
+var purpleBtn = document.querySelector(".purple-btn");
+var pinkBtn = document.querySelector(".pink-btn");
+var gameColor = document.querySelector(".game");
 
 // Functions
 function changeTurn() {
@@ -147,6 +156,13 @@ function resetGame() {
   unlockBoard();
 }
 
+function resetScores() {
+  totalX = 0;
+  totalO = 0;
+  scoreX.textContent = "Player One Score: " + totalX;
+  scoreO.textContent = "Player One Score: " + totalO;
+}
+
 function updateScoreX() {
   totalX = totalX + 1;
   scoreX.textContent = "Player One Score: " + totalX;
@@ -155,6 +171,97 @@ function updateScoreX() {
 function updateScoreO() {
   totalO = totalO + 1;
   scoreO.textContent = "Player One Score: " + totalO;
+}
+
+function changeBlue() {
+  gameColor.style.backgroundColor = "#75c8c8";
+  space1.style.backgroundColor = "#75c8c8";
+  space2.style.backgroundColor = "#75c8c8";
+  space3.style.backgroundColor = "#75c8c8";
+  space4.style.backgroundColor = "#75c8c8";
+  space5.style.backgroundColor = "#75c8c8";
+  space6.style.backgroundColor = "#75c8c8";
+  space7.style.backgroundColor = "#75c8c8";
+  space8.style.backgroundColor = "#75c8c8";
+  space9.style.backgroundColor = "#75c8c8";
+}
+
+function changeGreen() {
+  gameColor.style.backgroundColor = "#75c88e";
+  space1.style.backgroundColor = "#75c88e";
+  space2.style.backgroundColor = "#75c88e";
+  space3.style.backgroundColor = "#75c88e";
+  space4.style.backgroundColor = "#75c88e";
+  space5.style.backgroundColor = "#75c88e";
+  space6.style.backgroundColor = "#75c88e";
+  space7.style.backgroundColor = "#75c88e";
+  space8.style.backgroundColor = "#75c88e";
+  space9.style.backgroundColor = "#75c88e";
+}
+
+function changeRed() {
+  gameColor.style.backgroundColor = "#c87575";
+  space1.style.backgroundColor = "#c87575";
+  space2.style.backgroundColor = "#c87575";
+  space3.style.backgroundColor = "#c87575";
+  space4.style.backgroundColor = "#c87575";
+  space5.style.backgroundColor = "#c87575";
+  space6.style.backgroundColor = "#c87575";
+  space7.style.backgroundColor = "#c87575";
+  space8.style.backgroundColor = "#c87575";
+  space9.style.backgroundColor = "#c87575";
+}
+
+function changeOrange() {
+  gameColor.style.backgroundColor = "#c8a175";
+  space1.style.backgroundColor = "#c8a175";
+  space2.style.backgroundColor = "#c8a175";
+  space3.style.backgroundColor = "#c8a175";
+  space4.style.backgroundColor = "#c8a175";
+  space5.style.backgroundColor = "#c8a175";
+  space6.style.backgroundColor = "#c8a175";
+  space7.style.backgroundColor = "#c8a175";
+  space8.style.backgroundColor = "#c8a175";
+  space9.style.backgroundColor = "#c8a175";
+}
+
+function changeYellow() {
+  gameColor.style.backgroundColor = "#c7c875";
+  space1.style.backgroundColor = "#c7c875";
+  space2.style.backgroundColor = "#c7c875";
+  space3.style.backgroundColor = "#c7c875";
+  space4.style.backgroundColor = "#c7c875";
+  space5.style.backgroundColor = "#c7c875";
+  space6.style.backgroundColor = "#c7c875";
+  space7.style.backgroundColor = "#c7c875";
+  space8.style.backgroundColor = "#c7c875";
+  space9.style.backgroundColor = "#c7c875";
+}
+
+function changePurple() {
+  gameColor.style.backgroundColor = "#a375c8";
+  space1.style.backgroundColor = "#a375c8";
+  space2.style.backgroundColor = "#a375c8";
+  space3.style.backgroundColor = "#a375c8";
+  space4.style.backgroundColor = "#a375c8";
+  space5.style.backgroundColor = "#a375c8";
+  space6.style.backgroundColor = "#a375c8";
+  space7.style.backgroundColor = "#a375c8";
+  space8.style.backgroundColor = "#a375c8";
+  space9.style.backgroundColor = "#a375c8";
+}
+
+function changePink() {
+  gameColor.style.backgroundColor = "#c875b6";
+  space1.style.backgroundColor = "#c875b6";
+  space2.style.backgroundColor = "#c875b6";
+  space3.style.backgroundColor = "#c875b6";
+  space4.style.backgroundColor = "#c875b6";
+  space5.style.backgroundColor = "#c875b6";
+  space6.style.backgroundColor = "#c875b6";
+  space7.style.backgroundColor = "#c875b6";
+  space8.style.backgroundColor = "#c875b6";
+  space9.style.backgroundColor = "#c875b6";
 }
 
 function handleClick(event) {
@@ -170,4 +277,13 @@ for (var i = 0; i < spaces.length; i++) {
   spaces[i].addEventListener("click", handleClick);
 }
 
-resetBtn.addEventListener("click", resetGame);
+resetBoard.addEventListener("click", resetGame);
+resetScore.addEventListener("click", resetScores);
+
+blueBtn.addEventListener("click", changeBlue);
+greenBtn.addEventListener("click", changeGreen);
+redBtn.addEventListener("click", changeRed);
+orangeBtn.addEventListener("click", changeOrange);
+yellowBtn.addEventListener("click", changeYellow);
+purpleBtn.addEventListener("click", changePurple);
+pinkBtn.addEventListener("click", changePink);

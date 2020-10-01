@@ -7,7 +7,7 @@
 }
 
 .game {
-  background-color: #75c88e;
+  background-color: #888888;
   border-radius: 10px;
   padding: 10px;
   /* box-shadow: 0px 0px 20px rgb(217, 255, 219); */
@@ -28,7 +28,7 @@ h1 {
 .spaces {
   height: 100px;
   width: 100px;
-  background-color: #75c88e;
+  background-color: #888888;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -67,7 +67,8 @@ h1 {
   margin: 0 auto;
 }
 
-.reset-button-div {
+.reset-button-div,
+.reset-score-div {
   text-align: center;
   margin-top: 40px;
 }
@@ -84,7 +85,8 @@ h1 {
   font-family: "Permanent Marker", cursive;
 }
 
-.reset-button {
+.reset-button,
+.reset-score {
   background-color: #333333;
   border: none;
   border-radius: 2px;
@@ -112,6 +114,67 @@ h1 {
   padding: 15px;
 }
 
+/* Color Changes */
+
+.board-color-div {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.board-color {
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  width: 60px;
+  border-radius: 2px;
+  outline: none;
+}
+
+/* #75c88e ,
+  #c87575,
+  #c8a175
+#c7c875
+#75c8c8
+#a375c8
+#c875b6
+*/
+
+.blue-btn {
+  background-color: #333333;
+  color: #75c8c8;
+}
+
+.green-btn {
+  background-color: #333333;
+  color: #75c88e;
+}
+
+.red-btn {
+  background-color: #333333;
+  color: #c87575;
+}
+
+.orange-btn {
+  background-color: #333333;
+  color: #c8a175;
+}
+
+.yellow-btn {
+  background-color: #333333;
+  color: #c7c875;
+}
+
+.purple-btn {
+  background-color: #333333;
+  color: #a375c8;
+}
+
+.pink-btn {
+  background-color: #333333;
+  color: #c875b6;
+}
+
 /* Media Queries */
 
 /* 320px */
@@ -129,6 +192,11 @@ h1 {
     height: 35px;
     width: 35px;
     font-size: 24px;
+  }
+
+  .score-count-x,
+  .score-count-o {
+    display: block;
   }
 }
 
@@ -149,6 +217,11 @@ h1 {
     width: 35px;
     font-size: 24px;
   }
+
+  .score-count-x,
+  .score-count-o {
+    display: block;
+  }
 }
 
 /* 600px */
@@ -167,5 +240,10 @@ h1 {
     height: 35px;
     width: 35px;
     font-size: 24px;
+  }
+
+  .score-count-x,
+  .score-count-o {
+    display: block;
   }
 }
