@@ -7,7 +7,7 @@
 }
 
 .game {
-  background-color: #888888;
+  background-color: #c87575;
   border-radius: 10px;
   padding: 10px;
   /* box-shadow: 0px 0px 20px rgb(217, 255, 219); */
@@ -28,7 +28,7 @@ h1 {
 .spaces {
   height: 100px;
   width: 100px;
-  background-color: #888888;
+  background-color: #c87575;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -180,8 +180,8 @@ h1 {
   }
 
   .spaces {
-    height: 35px;
-    width: 35px;
+    height: 40px;
+    width: 40px;
     font-size: 24px;
   }
 
@@ -208,7 +208,7 @@ h1 {
   }
 
   .spaces {
-    height: 35px;
+    height: 350px;
     width: 35px;
     font-size: 24px;
   }
