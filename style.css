@@ -131,15 +131,6 @@ h1 {
   outline: none;
 }
 
-/* #75c88e ,
-  #c87575,
-  #c8a175
-#c7c875
-#75c8c8
-#a375c8
-#c875b6
-*/
-
 .blue-btn {
   background-color: #333333;
   color: #75c8c8;
@@ -198,6 +189,10 @@ h1 {
   .score-count-o {
     display: block;
   }
+
+  .board-color {
+    margin-top: 10px;
+  }
 }
 
 /* 480px */
@@ -222,6 +217,10 @@ h1 {
   .score-count-o {
     display: block;
   }
+
+  .board-color {
+    margin-top: 10px;
+  }
 }
 
 /* 600px */
@@ -245,5 +244,9 @@ h1 {
   .score-count-x,
   .score-count-o {
     display: block;
+  }
+
+  .board-color {
+    margin-top: 10px;
   }
 }

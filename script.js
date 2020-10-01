@@ -279,7 +279,6 @@ for (var i = 0; i < spaces.length; i++) {
 
 resetBoard.addEventListener("click", resetGame);
 resetScore.addEventListener("click", resetScores);
-
 blueBtn.addEventListener("click", changeBlue);
 greenBtn.addEventListener("click", changeGreen);
 redBtn.addEventListener("click", changeRed);
