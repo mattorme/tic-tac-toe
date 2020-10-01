@@ -18,7 +18,8 @@ var winnerMsg = document.querySelector(".winner-msg-p");
 var resetBtn = document.querySelector(".reset-button");
 var scoreX = document.querySelector(".score-count-x");
 var scoreO = document.querySelector(".score-count-o");
-var total = 0;
+var totalX = 0;
+var totalO = 0;
 
 // Functions
 function changeTurn() {
@@ -58,7 +59,7 @@ function checkWin() {
   ) {
     winnerMsg.textContent = `X's win!`;
     lockBoard();
-    // updateScoreX();
+    updateScoreX();
   } else if (
     (space1.textContent == playerTwo &&
       space2.textContent == playerTwo &&
@@ -87,6 +88,7 @@ function checkWin() {
   ) {
     winnerMsg.textContent = `O's win!`;
     lockBoard();
+    updateScoreO();
   }
 }
 
@@ -115,8 +117,7 @@ function unlockBoard() {
 }
 
 function checkDraw() {
-  if (checkWin()) {
-  } else if (
+  if (
     (space1.textContent == playerOne || space1.textContent == playerTwo) &&
     (space2.textContent == playerOne || space2.textContent == playerTwo) &&
     (space3.textContent == playerOne || space3.textContent == playerTwo) &&
@@ -147,8 +148,13 @@ function resetGame() {
 }
 
 function updateScoreX() {
-  total++;
-  scoreX.textContent = "Player One Score: " + total;
+  totalX = totalX + 1;
+  scoreX.textContent = "Player One Score: " + totalX;
+}
+
+function updateScoreO() {
+  totalO = totalO + 1;
+  scoreO.textContent = "Player One Score: " + totalO;
 }
 
 function handleClick(event) {
