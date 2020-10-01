@@ -1,27 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+.game {
+  background-color: #75c88e;
+  border-radius: 10px;
+  padding: 10px;
+}
 body {
   margin: 5% 25% 0 25%;
+  background-color: #333;
 }
 
-div {
+h1 {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+
+.spaces {
   height: 100px;
   width: 100px;
-  background-color: #ffffff;
+  background-color: #75c88e;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-top: 2px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 48px;
+  cursor: pointer;
 }
 
 .background {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   height: 310px;
-  background-color: #000000;
+  background-color: #ffffff;
   width: 310px;
+  margin: 0 auto;
+}
+
+.reset-button-div {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.winner-msg-div {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.winner-msg-p {
+  color: #ffffff;
+  font-size: 36px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.reset-button {
+  background-color: #333333;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 24px;
+  width: 65%;
+  color: #ffffff;
+  outline: none;
 }

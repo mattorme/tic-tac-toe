@@ -53,7 +53,7 @@ function checkWin() {
       space5.textContent == playerOne &&
       space7.textContent == playerOne)
   ) {
-    winnerMsg.textContent = `X's won!`;
+    winnerMsg.textContent = `X's win!`;
     lockBoard();
   } else if (
     (space1.textContent == playerTwo &&
@@ -81,7 +81,7 @@ function checkWin() {
       space5.textContent == playerTwo &&
       space7.textContent == playerTwo)
   ) {
-    winnerMsg.textContent = `O's won!`;
+    winnerMsg.textContent = `O's win!`;
     lockBoard();
   }
 }
