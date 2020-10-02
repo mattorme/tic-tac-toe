@@ -25,7 +25,7 @@ This game was developed using a mixture of **HTML5, CSS3,** and **Vanilla JavaSc
 
 ### Development
 
-- I started planning in a text document, writing down the problemds I would face in the relevant technologies.
+- I started planning in a text document, writing down the problems I would face in the relevant technologies.
 
 - The HTML was very straight forward, and I didn't run in to any problems until the styling and the development of the actual game functionallity.
 
