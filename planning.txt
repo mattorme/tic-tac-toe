@@ -1,0 +1,17 @@
+Tic-Tac-Toe
+ -HTML
+  -Basic Grid
+  -X's and O's
+ -CSS
+  -Accessible
+  -Functional
+ -JavaScript
+  -Click events
+  -checkWin
+  -checkDraw
+  -Switch Player
+  -Lock Board
+ -Extras
+  -Change board colors
+  -Log player scores
+ 
