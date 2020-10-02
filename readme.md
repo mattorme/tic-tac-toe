@@ -4,7 +4,7 @@
 
 ### Where to Play?
 
-**Here --->** https://mattorme.github.io/tic-tac-toe/
+**Here --->** https://mattorme.github.io/tic-tac-toe/ (opens in same tab)
 
 ### Rules
 
