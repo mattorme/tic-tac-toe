@@ -1,6 +1,5 @@
-#Tic-Tac-Toe Game for GA
+# Tic-Tac-Toe Game for GA
 
-![Game Preview]
-(img/preview.png)
+![](img/preview.png)
 
-##Rules
+### Rules
