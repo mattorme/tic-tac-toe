@@ -14,6 +14,15 @@ The game is played on a **3x3 grid**, where 2 players attempt to draw **3 of the
 
 This game was developed using a mixture of **HTML5, CSS3,** and **Vanilla JavaScript.**
 
+### Requirements
+
+- [x] Evidence of planning
+- [x] A working game, that can **win**, **draw**, and **lose**
+- [x] A link to my **hosted working game**
+- [x] A git repository **hosted on GitHub with frequent commits**
+- [x] A **readme.md** file
+- [x] Submission and presentation on **Friday at 1430**
+
 ### Development
 
 - I started planning in a text document, writing down the problemds I would face in the relevant technologies.
